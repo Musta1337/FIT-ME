@@ -1,0 +1,12 @@
+##########################
+
+link sharing format:
+----> Link Information <----     <URL>
+
+##########################
+
+
+----> Login and Register Sample <----    https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php
+
+
+
