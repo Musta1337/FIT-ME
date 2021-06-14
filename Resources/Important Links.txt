@@ -10,5 +10,6 @@ link sharing format:
 
 ----> Form data input validation <----    https://www.w3schools.com/php/php_form_validation.asp
 
+----> Add / Remove input field using Jquery <----  https://stackoverflow.com/questions/9173182/add-remove-input-field-dynamically-with-jquery
 
 
