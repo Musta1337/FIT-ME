@@ -12,4 +12,4 @@ link sharing format:
 
 ----> Add / Remove input field using Jquery <----  https://stackoverflow.com/questions/9173182/add-remove-input-field-dynamically-with-jquery
 
-
+----> Toggle switch button CSS <---- https://www.youtube.com/watch?v=W3FVLwEF8y4
