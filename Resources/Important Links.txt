@@ -8,5 +8,7 @@ link sharing format:
 
 ----> Login and Register Sample <----    https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php
 
+----> Form data input validation <----    https://www.w3schools.com/php/php_form_validation.asp
+
 
 
