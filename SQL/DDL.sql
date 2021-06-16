@@ -71,7 +71,7 @@ CREATE TABLE workout_plan
     planID int autogenerate NOT NULL;
     workout_name varchar(25) NOT NULL;
     Diet_id NUMBER(7) NOT NULL;
-    Age NUMBER(7) NOT NULL;
+    Age NUMBER(3) NOT NULL;
     gender varchar(6) NOT NULL;
     plan_type varchar(5) NOT NULL;
     BMI NUMBER(7) NOT NULL;
@@ -100,9 +100,9 @@ CREATE TABLE Log
     member_id NUMBER(7) NOT NULL;
     workout_perc FLOAT NOT NULL;
     diet_perc FLOAT NOT NULL;
-    BMI int NOT NULL;
-    Weight int NOT NULL;
-    muscle mass int NOT NULL;
+    BMI NUMBER(7) NOT NULL;
+    Weight NUMBER(7) NOT NULL;
+    muscle mass NUMBER(7) NOT NULL;
     Log_Date Date;
     constraint PK_L PRIMARY KEY(sr);
     CONSTRAINT FK_LG_Mr FOREIGN KEY (member_id)
