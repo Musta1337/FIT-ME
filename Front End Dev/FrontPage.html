@@ -4,17 +4,35 @@
     <meta charset="utf-8">
     <title>Fit me</title>
     <link rel="stylesheet" href="FrontStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS only -->
 </head>
 <body>
-    <div class="logo">FIT ME</div>
-    <div class="options">
+    <div class="menu">
+        <h1 class=logo>Fit Me</h1>
         <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="login.html">Log In</a></li>
-            <li><a href="Register.html">Register</a></li>    
-            <li><a href="#">Forms</a></li>
-            <li><a href="#">Reports</a></li>    
+            <li><a href="#">About</li>
+            <li><a href="#">Froms<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="login.html">Log In</li>
+                        <li><a href="Register.html">Register</li>
+                        <li><a href="CreateWorkoutPlan.html">Create Workout Plan</li>  
+                    </ul>
+                </div>
+            </li>
+             <li><a href="#">Report<i class="fas fa-caret-down"></i></a>
+             <div class="dropdown">
+                <ul>
+                    <li><a href="#">Diet plan</li>
+                    <li><a href="#">exercise type based on fitness goal</li>
+                    <li><a href="#">Create a personalize plan</li>  
+                </ul>
+            </div>
+        </li>
+             <li><a href="#">Contact</a></li> 
         </ul>
+
     </div>
+     
 </body>
