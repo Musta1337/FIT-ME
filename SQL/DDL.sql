@@ -17,7 +17,7 @@ CREATE TABLE Diet_Plan
 
 CREATE TABLE Member
 (
-    member_id int autogenerate NOT NULL,
+    member_id int NOT NULL,
     M_password varchar(50) NOT NULL,
     planID int NOT NULL,
     member_type varchar(25) NOT NULL,
@@ -25,6 +25,18 @@ CREATE TABLE Member
     gender varchar(6) NOT NULL,
     constraint PK_M PRIMARY KEY(member_id)
 );
+CREATE SEQUENCE member_seq START WITH 1;
+
+CREATE OR REPLACE TRIGGER member_bir
+BEFORE INSERT ON Member
+FOR EACH ROW
+
+BEGIN 
+    SELECT workout_seq.NEXTVAL
+    INTO :new.member_id
+    FROM DUAL;
+END;
+/
 
 CREATE TABLE equipment
 (
@@ -38,7 +50,7 @@ CREATE TABLE Exercise
     exercise_name varchar(25) NOT NULL,
     freq NUMBER(7) NOT NULL,
     exercise_equipment varchar(25) NOT NULL,
-    exercise_time time,
+    exercise_time varchar(5),
     constraint PK_ex PRIMARY KEY(exercise_name),
     CONSTRAINT FK_ex_eq FOREIGN KEY (exercise_equipment) REFERENCES equipment(equipment_name)
 );
@@ -57,8 +69,7 @@ CREATE TABLE nutrient_diet
     diet_id NUMBER(7) NOT NULL,
     day int NOT NULL,
     nutrient_name varchar(25) NOT NULL,
-    constraint PK_Nd PRIMARY KEY(day),
-    constraint PK_Nud PRIMARY KEY(diet_id),
+    constraint PK_Nd PRIMARY KEY(day, diet_id),
     CONSTRAINT FK_nd_nu FOREIGN KEY (nutrient_name)
     REFERENCES Nutrition(nutrient_name),
     CONSTRAINT FK_Nd_DP FOREIGN KEY (diet_id) REFERENCES Diet_Plan(Diet_id)
@@ -66,7 +77,7 @@ CREATE TABLE nutrient_diet
 
 CREATE TABLE workout_plan
 (
-    planID int autogenerate NOT NULL,
+    planID int NOT NULL,
     workout_name varchar(25) NOT NULL,
     Diet_id NUMBER(7) NOT NULL,
     Age NUMBER(3) NOT NULL,
@@ -76,6 +87,19 @@ CREATE TABLE workout_plan
     constraint PK_Wp PRIMARY KEY(planID),
     CONSTRAINT FK_WP_DP FOREIGN KEY (Diet_id) REFERENCES Diet_Plan(Diet_id)
 );
+
+CREATE SEQUENCE workout_seq START WITH 1;
+
+CREATE OR REPLACE TRIGGER workout_bir
+BEFORE INSERT ON workout_plan
+FOR EACH ROW
+
+BEGIN 
+    SELECT workout_seq.NEXTVAL
+    INTO :new.planID
+    FROM DUAL;
+END;
+/
 
 CREATE TABLE muscle_workout
 (
@@ -92,7 +116,7 @@ CREATE TABLE muscle_workout
 
 CREATE TABLE Log
 (
-    sr int autogenerate NOT NULL,
+    sr NUMBER(7) NOT NULL,
     member_id NUMBER(7) NOT NULL,
     workout_perc FLOAT NOT NULL,
     diet_perc FLOAT NOT NULL,
@@ -103,3 +127,17 @@ CREATE TABLE Log
     constraint PK_L PRIMARY KEY(sr),
     CONSTRAINT FK_LG_Mr FOREIGN KEY (member_id) REFERENCES Member(member_id)
 );
+
+
+CREATE SEQUENCE log_seq START WITH 1;
+
+CREATE OR REPLACE TRIGGER log_bir
+BEFORE INSERT ON Log
+FOR EACH ROW
+
+BEGIN 
+    SELECT log_seq.NEXTVAL
+    INTO :new.sr
+    FROM DUAL;
+END;
+/
