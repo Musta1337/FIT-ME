@@ -54,3 +54,13 @@ body{
     display: block;
     margin:10px;
 }
+.search{
+    position: absolute;
+}
+input{
+    border:3px solid black;
+    height: 40px;
+    width: 300px;
+    border-radius: 50px;
+    padding: 10px;
+}
