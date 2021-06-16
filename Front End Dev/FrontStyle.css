@@ -35,6 +35,11 @@ body{
 }
 .logo{
  color: antiquewhite;   
+ text-shadow: 5px 5px 5px blue;   
+}
+.logo span{
+    color:blue;
+    text-shadow: 5px 5px 5px white;
 }
 .dropdown{
     display: none;
