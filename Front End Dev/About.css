@@ -1,0 +1,58 @@
+body{
+    background-image: url("gym.jpg");
+    background-size: cover;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+h2{
+    padding: 5%;
+    text-align: center;  
+}
+h3,h4{
+    margin: 30px;
+}
+.menu{
+    background-color: black;
+    height:80px;
+    width:100%;
+    align-content: center;
+    justify-content: space-between;
+    display:flex;
+    padding: 0 5%;
+    font-size: 20px;
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+}
+.menu ul li a:hover{
+    color:chartreuse;
+}
+.menu ul li{
+    padding: 10px 40px;
+    position: relative;
+}
+.menu ul li a{
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.logo{
+ color: antiquewhite;   
+}
+.dropdown{
+    display: none;
+}
+.menu ul li:hover .dropdown{
+    display: block;
+    position: absolute;
+    background-color: black;
+    left:0;
+}
+.dropdown ul{
+    display: block;
+    margin:10px;
+}
