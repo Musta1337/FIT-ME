@@ -14,7 +14,7 @@
             <input type="submit" value="Submit">
         </form>
         <?php  // creating a database connection 
-        if(isset($_POST["EMPLOYEE_ID"]))
+        if(isset($_POST["diet_weeks"]))
         {
             $db_sid = "(DESCRIPTION =
             (ADDRESS = (PROTOCOL = TCP)(HOST = DESKTOP-UAQMM7R)(PORT = 1521))
