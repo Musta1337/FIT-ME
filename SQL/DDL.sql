@@ -1,8 +1,9 @@
 CREATE TABLE Nutrition
 (
+    nutrient_name varchar(25) NOT NULL;
     Calories NUMBER(7) NOT NULL;
     N_description varchar(200);
-    constraint PK_N PRIMARY KEY(Calories);
+    constraint PK_N PRIMARY KEY(nutrient_name);
 );
 
 CREATE TABLE Diet_Plan
@@ -50,7 +51,7 @@ CREATE TABLE Muscle_group
     exercise_name varchar(25) NOT NULL;
     constraint PK_Mg PRIMARY KEY(muscle_group);
     CONSTRAINT FK_Mg_ex FOREIGN KEY (exercise_name)
-    REFERENCES Nutrition(exercise_name);
+    REFERENCES Exercise(exercise_name);
 );
 
 CREATE TABLE nutrient_diet
@@ -61,7 +62,7 @@ CREATE TABLE nutrient_diet
     constraint PK_Nd PRIMARY KEY(day);
     constraint PK_Nud PRIMARY KEY(diet_id);
     CONSTRAINT FK_nd_nu FOREIGN KEY (nutrient_name)
-    REFERENCES Exercise(Nutrition);
+    REFERENCES Nutrition(nutrient_name);
     CONSTRAINT FK_Nd_DP FOREIGN KEY (diet_id)
     REFERENCES Diet_Plan(Diet_id);
 );
