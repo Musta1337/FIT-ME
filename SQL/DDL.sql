@@ -124,7 +124,7 @@ CREATE TABLE Log
     diet_perc FLOAT NOT NULL,
     BMI NUMBER(7) NOT NULL,
     Weight NUMBER(7) NOT NULL,
-    muscle mass NUMBER(7) NOT NULL,
+    muscle_mass NUMBER(7) NOT NULL,
     Log_Date Date,
     constraint PK_L PRIMARY KEY(sr),
     CONSTRAINT FK_LG_Mr FOREIGN KEY (member_id) REFERENCES Member(member_id)
