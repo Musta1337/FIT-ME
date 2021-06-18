@@ -21,9 +21,9 @@ insert into equipment values('Ab crunch machine','do at least 3 reps of 15');
 insert into equipment values('hanging rod','do at least 3 reps of 10');
 
 
-insert into Exercise values('cardio',7,'treadmill,upright bike,leg press,Leg extension machine','2 hours');
-insert into Exercise values('cable crossover',2,'Ab crunch machine','20 minutes');
-insert into Exercise values('pullups',2,'hanging rod','10 minutes');
+insert into Exercise values('cardio',7,'treadmill,upright bike,leg press,Leg extension machine','2:00:00');
+insert into Exercise values('cable crossover',2,'Ab crunch machine','00:20:00');
+insert into Exercise values('pullups',2,'hanging rod','00:10:00');
 
 insert into Muscle_group values('legs','do cardio and squats for legs','cardio');
 insert into Muscle_group values('chest','do cable crossover and pec dec machine for chest ','cable crossover');
