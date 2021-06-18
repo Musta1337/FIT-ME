@@ -9,11 +9,6 @@ insert into Diet_Plan values(000001,'Intermittent fasting','5 weeks','weight los
 insert into Diet_Plan values(000002,'low carb diet','3 weeks','weight loss');
 insert into Diet_Plan values(000003,'whole eggs and yogurts','3 weeks','weight gain');
 
-insert into Member values(01,'musawyne',100,'musa',23,'male');
-insert into Member values(02,'ahmadarif_1',100,'ahmad',34,'male');
-insert into Member values(03,'ayesha_kamran',200,'ayesha',24,'female');
-
-
 insert into equipment values('treadmill','do for at least 50 minutes');
 insert into equipment values('upright bike','do for at least 50 minutes');
 insert into equipment values('rowing machine','do 3 reps of 20');
@@ -30,11 +25,9 @@ insert into Exercise values('cardio',7,'treadmill,upright bike,leg press,Leg ext
 insert into Exercise values('cable crossover',2,'Ab crunch machine','20 minutes');
 insert into Exercise values('pullups',2,'hanging rod','10 minutes');
 
-
 insert into Muscle_group values('legs','do cardio and squats for legs','cardio');
 insert into Muscle_group values('chest','do cable crossover and pec dec machine for chest ','cable crossover');
 insert into Muscle_group values('biceps','do pull ups as much as you can do','pullups');
-
 
 insert into nutrient_diet values(0001,40,'meat');
 insert into nutrient_diet values(0002,20,'beans');
@@ -42,19 +35,17 @@ insert into nutrient_diet values(0003,30,'baked potato');
 insert into nutrient_diet values(0004,60,'milk');
 insert into nutrient_diet values(0005,40,'egg');
 
-
-
 insert into workout_plan values(1,'cardio',000001, 23, 'male','weight loss',26);
 insert into workout_plan values(2,'cable crossover',000002, 34, 'male','weight loss',28);
 insert into workout_plan values(3,'pullups',000003, 24, 'female','weight gain',17);
-
-
 
 insert into muscle_workout values(1,'legs',1,'2 hours');
 insert into muscle_workout values(2,'chest',3, '20 minutes');
 insert into muscle_workout values(3,'biceps',4, '20 minutes');
 
-
+insert into Member values(01,'musawyne',100,'musa',23,'male');
+insert into Member values(02,'ahmadarif_1',100,'ahmad',34,'male');
+insert into Member values(03,'ayesha_kamran',200,'ayesha',24,'female');
 
 insert into Log values(11111,01,89,78,26,91,75,'24-Jan-2021');
 insert into Log values(22222,02,76,89,28,84,80,'14-May-2020');
