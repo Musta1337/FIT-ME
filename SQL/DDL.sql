@@ -74,7 +74,7 @@ CREATE TABLE Member
     member_type varchar(25) NOT NULL,
     Age NUMBER(3) NOT NULL,
     gender varchar(6) NOT NULL,
-    constraint PK_M PRIMARY KEY(member_id)
+    constraint PK_M PRIMARY KEY(member_id),
     constraint FK_Mem FOREIGN KEY(planID) REFERENCES workout_plan(planID)
 );
 CREATE SEQUENCE member_seq START WITH 1;
