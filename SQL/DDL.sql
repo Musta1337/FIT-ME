@@ -109,7 +109,7 @@ CREATE TABLE muscle_workout
     planID NUMBER(7) NOT NULL,
     muscle_group varchar(25) NOT NULL,
     Day NUMBER(2) NOT NULL,
-    workout_Time time NOT NULL,
+    workout_Time varchar(5) NOT NULL,
     constraint PK_mW PRIMARY KEY(planID, muscle_group),
     CONSTRAINT FK_MW_WP FOREIGN KEY (planID)
     REFERENCES workout_plan(planID),
