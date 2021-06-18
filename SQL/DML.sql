@@ -5,9 +5,9 @@ insert into Nutrition values('milk',42,'100 gram has 42 calories, 100 gram per d
 insert into Nutrition values('egg',78,'1 egg has 78 calories, 2 eggs per day');
 
 
-insert into Diet_Plan values(000001,'Intermittent fasting','5 weeks','weight loss');
-insert into Diet_Plan values(000002,'low carb diet','3 weeks','weight loss');
-insert into Diet_Plan values(000003,'whole eggs and yogurts','3 weeks','weight gain');
+insert into Diet_Plan values(0000001,'Intermittent fasting','5 weeks','weight loss');
+insert into Diet_Plan values(0000002,'low carb diet','3 weeks','weight loss');
+insert into Diet_Plan values(0000003,'whole eggs and yogurts','3 weeks','weight gain');
 
 insert into equipment values('treadmill','do for at least 50 minutes');
 insert into equipment values('upright bike','do for at least 50 minutes');
@@ -29,11 +29,11 @@ insert into Muscle_group values('legs','do cardio and squats for legs','cardio')
 insert into Muscle_group values('chest','do cable crossover and pec dec machine for chest ','cable crossover');
 insert into Muscle_group values('biceps','do pull ups as much as you can do','pullups');
 
-insert into nutrient_diet values(0001,40,'meat');
-insert into nutrient_diet values(0002,20,'beans');
-insert into nutrient_diet values(0003,30,'baked potato');
-insert into nutrient_diet values(0004,60,'milk');
-insert into nutrient_diet values(0005,40,'egg');
+insert into nutrient_diet values(0000001,40,'Meat');
+insert into nutrient_diet values(0000002,20,'beans');
+insert into nutrient_diet values(0000003,30,'baked potato');
+insert into nutrient_diet values(0000002,60,'milk');
+insert into nutrient_diet values(0000001,40,'egg');
 
 insert into workout_plan values(1,'cardio',000001, 23, 'male','weight loss',26);
 insert into workout_plan values(2,'cable crossover',000002, 34, 'male','weight loss',28);
@@ -43,9 +43,9 @@ insert into muscle_workout values(1,'legs',1,'2 hours');
 insert into muscle_workout values(2,'chest',3, '20 minutes');
 insert into muscle_workout values(3,'biceps',4, '20 minutes');
 
-insert into Member values(01,'musawyne',100,'musa',23,'male');
-insert into Member values(02,'ahmadarif_1',100,'ahmad',34,'male');
-insert into Member values(03,'ayesha_kamran',200,'ayesha',24,'female');
+insert into Member values(01,'musawyne',1,'musa',23,'male');
+insert into Member values(02,'ahmadarif_1',1,'ahmad',34,'male');
+insert into Member values(03,'ayesha_kamran',2,'ayesha',24,'female');
 
 insert into Log values(11111,01,89,78,26,91,75,'24-Jan-2021');
 insert into Log values(22222,02,76,89,28,84,80,'14-May-2020');
