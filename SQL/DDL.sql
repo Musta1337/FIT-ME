@@ -15,29 +15,6 @@ CREATE TABLE Diet_Plan
     constraint PK_DP PRIMARY KEY(Diet_id)
 );
 
-CREATE TABLE Member
-(
-    member_id int NOT NULL,
-    M_password varchar(50) NOT NULL,
-    planID int NOT NULL,
-    member_type varchar(25) NOT NULL,
-    Age NUMBER(3) NOT NULL,
-    gender varchar(6) NOT NULL,
-    constraint PK_M PRIMARY KEY(member_id)
-);
-CREATE SEQUENCE member_seq START WITH 1;
-
-CREATE OR REPLACE TRIGGER member_bir
-BEFORE INSERT ON Member
-FOR EACH ROW
-
-BEGIN 
-    SELECT workout_seq.NEXTVAL
-    INTO :new.member_id
-    FROM DUAL;
-END;
-/
-
 CREATE TABLE equipment
 (
     equipment_name varchar(25) NOT NULL,
@@ -87,6 +64,32 @@ CREATE TABLE workout_plan
     constraint PK_Wp PRIMARY KEY(planID),
     CONSTRAINT FK_WP_DP FOREIGN KEY (Diet_id) REFERENCES Diet_Plan(Diet_id)
 );
+
+
+CREATE TABLE Member
+(
+    member_id int NOT NULL,
+    M_password varchar(50) NOT NULL,
+    planID int NOT NULL,
+    member_type varchar(25) NOT NULL,
+    Age NUMBER(3) NOT NULL,
+    gender varchar(6) NOT NULL,
+    constraint PK_M PRIMARY KEY(member_id)
+    constraint FK_Mem FOREIGN KEY(planID) REFERENCES workout_plan(planID)
+);
+CREATE SEQUENCE member_seq START WITH 1;
+
+CREATE OR REPLACE TRIGGER member_bir
+BEFORE INSERT ON Member
+FOR EACH ROW
+
+BEGIN 
+    SELECT workout_seq.NEXTVAL
+    INTO :new.member_id
+    FROM DUAL;
+END;
+/
+
 
 CREATE SEQUENCE workout_seq START WITH 1;
 
