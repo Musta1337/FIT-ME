@@ -39,9 +39,9 @@ insert into workout_plan values(1,'cardio',000001, 23, 'male','weight loss',26);
 insert into workout_plan values(2,'cable crossover',000002, 34, 'male','weight loss',28);
 insert into workout_plan values(3,'pullups',000003, 24, 'female','weight gain',17);
 
-insert into muscle_workout values(1,'legs',1,'2 hours');
-insert into muscle_workout values(2,'chest',3, '20 minutes');
-insert into muscle_workout values(3,'biceps',4, '20 minutes');
+insert into muscle_workout values(1,'legs',1,'02:00:00');
+insert into muscle_workout values(2,'chest',3, '00:20:00');
+insert into muscle_workout values(3,'biceps',4, '00:20:00');
 
 insert into Member values(01,'musawyne',1,'musa',23,'male');
 insert into Member values(02,'ahmadarif_1',1,'ahmad',34,'male');
