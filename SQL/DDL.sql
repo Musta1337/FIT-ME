@@ -66,31 +66,6 @@ CREATE TABLE workout_plan
 );
 
 
-CREATE TABLE Member
-(
-    member_id int NOT NULL,
-    M_password varchar(50) NOT NULL,
-    planID int NOT NULL,
-    member_type varchar(25) NOT NULL,
-    Age NUMBER(3) NOT NULL,
-    gender varchar(6) NOT NULL,
-    constraint PK_M PRIMARY KEY(member_id),
-    constraint FK_Mem FOREIGN KEY(planID) REFERENCES workout_plan(planID)
-);
-CREATE SEQUENCE member_seq START WITH 1;
-
-CREATE OR REPLACE TRIGGER member_bir
-BEFORE INSERT ON Member
-FOR EACH ROW
-
-BEGIN 
-    SELECT workout_seq.NEXTVAL
-    INTO :new.member_id
-    FROM DUAL;
-END;
-/
-
-
 CREATE SEQUENCE workout_seq START WITH 1;
 
 CREATE OR REPLACE TRIGGER workout_bir
@@ -115,6 +90,30 @@ CREATE TABLE muscle_workout
     REFERENCES workout_plan(planID),
     CONSTRAINT FK_MW_MG FOREIGN KEY (muscle_group) REFERENCES Muscle_group(muscle_group)
 );
+
+CREATE TABLE Member
+(
+    member_id int NOT NULL,
+    M_password varchar(50) NOT NULL,
+    planID int NOT NULL,
+    member_type varchar(25) NOT NULL,
+    Age NUMBER(3) NOT NULL,
+    gender varchar(6) NOT NULL,
+    constraint PK_M PRIMARY KEY(member_id),
+    constraint FK_Mem FOREIGN KEY(planID) REFERENCES workout_plan(planID)
+);
+CREATE SEQUENCE member_seq START WITH 1;
+
+CREATE OR REPLACE TRIGGER member_bir
+BEFORE INSERT ON Member
+FOR EACH ROW
+
+BEGIN 
+    SELECT workout_seq.NEXTVAL
+    INTO :new.member_id
+    FROM DUAL;
+END;
+/
 
 CREATE TABLE Log
 (
