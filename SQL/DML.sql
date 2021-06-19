@@ -77,6 +77,13 @@ insert into muscle_workout values(3,'triceps',4, '1H');
 insert into muscle_workout values(3,'legs',5, '40M');
 insert into muscle_workout values(3,'shoulders',6, '30M');
 
+insert into muscle_workout values(4,'thighs',1,'2H');
+insert into muscle_workout values(4,'biceps',2,'2H');
+insert into muscle_workout values(4,'shoulders',3, '20M');
+insert into muscle_workout values(4,'chest',4, '1H');
+insert into muscle_workout values(4,'legs',5, '40M');
+insert into muscle_workout values(4,'triceps',6, '30M');
+
 
 insert into Member(member_name, M_password, planID, member_type, Age, gender)values('Musa','musawyne',1,'user',23,'male');
 insert into Member(member_name, M_password, planID, member_type, Age, gender) values('Ahmed','ahmadarif_1',1,'user',34,'male');
