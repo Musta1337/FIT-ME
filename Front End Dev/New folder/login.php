@@ -15,7 +15,7 @@
             <label for="password">Password</label>
             <input type="password" id=password name="password" placeholder="Enter your password">
             <button type="submit">LOG IN</button>
-            <p>Don't have an account? <a href="register.html">Register now</a>.</p>
+            <p>Don't have an account? <a href="Register.php">Register now</a>.</p>
         </form>
         <?php  // creating a database connection 
     if(isset($_POST["M_password"]))
