@@ -2,7 +2,6 @@ body{
     background-color:dimgray;
     display:flex;
     text-align: center;
-    justify-content: center;
     height: 300px;
 }
 
