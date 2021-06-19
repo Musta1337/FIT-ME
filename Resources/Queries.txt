@@ -1,29 +1,29 @@
-Login:
+1) Login:
 select * from Member where member_name = '".$_POST["user"]."' and M_password = '".$_POST["password"]."'";
 
 
-Register:
+2) Register:
 insert into Member(member_name,M_password,planID,member_type,Age,gender) VALUES ('".$_POST["Member_name"]."','".$_POST["M_password"]."', 1, 'none',".$_POST["Age"].", '".$_POST["Gender"]."')";
 
 
-Diet PLan Report:
+3) Diet PLan Report:
 select * from Diet_Plan dp join nutrient_diet nd on (dp.diet_id = nd.diet_id) where dp.diet_weeks = '".$_POST["type"]."'";
 
-Exercise Type Report:
+4) Exercise Type Report:
 select distinct e.exercise_name, e.freq, e.exercise_equipment, e.exercise_time from muscle_workout mw join workout_plan wp on (mw.planID = wp.planID) join muscle_group mg on (mg.muscle_group = mw.muscle_group) join exercise e on (e.exercise_name = mg.exercise_name) where wp.plan_type = '".$_POST['type']."'";
 
-Search QUery for Diet:
+5) Search QUery for Diet:
 "select * from diet_plan where diet_name like '%".$_POST['box']."%'"
 
-Search QUery for Exercise:
+6) Search QUery for Exercise:
 "select * from exercise where exercise_name like '%".$_POST['box']."%'"
 
 
-LOG:
+7) LOG:
 insert into Log(member_id, workout_perc, diet_perc, BMI, Weight, muscle_mass, Log_Date) VALUES (".$row['MEMBER_ID'].",".$_POST["workout_perc"].",".$_POST["diet_perc"].",".$_POST["BMI"].",".$_POST["weight"].",".$_POST["muscle_mass"].", TO_DATE('".$_POST["w_Date"]."', 'DD-MON-YYYY'))
 
-Create your personalize plan:
+8) Create your personalize plan:
 select * from workout_plan where (age > ".$_POST['age']." - 5 AND age < ".$_POST['age']." + 5) AND (gender = '".$_POST['gender']."') AND (plan_type like '%".$_POST['type']."%') AND (BMI > ".$_POST['bmi']." - 5 and BMI < ".$_POST['bmi']." + 5)
 
-Personalize plan data for personalize plan exercises:
+9) Personalize plan data for personalize plan exercises:
 "select * from muscle_workout where planID = '".$row['PLANID']."'"
