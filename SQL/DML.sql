@@ -5,9 +5,9 @@ insert into Nutrition values('milk',42,'100 gram has 42 calories, 100 gram per d
 insert into Nutrition values('egg',78,'1 egg has 78 calories, 2 eggs per day');
 
 
-insert into Diet_Plan values(0000001,'Intermittent fasting','5 weeks','weight loss');
-insert into Diet_Plan values(0000002,'low carb diet','3 weeks','weight loss');
-insert into Diet_Plan values(0000003,'whole eggs and yogurts','3 weeks','weight gain');
+insert into Diet_Plan values(1,'Intermittent fasting','week','loss');
+insert into Diet_Plan values(2,'low carb diet','week','loss');
+insert into Diet_Plan values(3,'weight gain','month','gain');
 
 insert into equipment values('treadmill','do for at least 50 minutes');
 insert into equipment values('upright bike','do for at least 50 minutes');
@@ -21,33 +21,46 @@ insert into equipment values('Ab crunch machine','do at least 3 reps of 15');
 insert into equipment values('hanging rod','do at least 3 reps of 10');
 
 
-insert into Exercise values('cardio',7,'treadmill,upright bike,leg press,Leg extension machine','2:00:00');
-insert into Exercise values('cable crossover',2,'Ab crunch machine','00:20:00');
-insert into Exercise values('pullups',2,'hanging rod','00:10:00');
+insert into Exercise values('cardio',7,'treadmill','2H');
+insert into Exercise values('cable crossover',2,'Ab crunch machine','20M');
+insert into Exercise values('pullups',2,'hanging rod','10M');
 
 insert into Muscle_group values('legs','do cardio and squats for legs','cardio');
 insert into Muscle_group values('chest','do cable crossover and pec dec machine for chest ','cable crossover');
 insert into Muscle_group values('biceps','do pull ups as much as you can do','pullups');
 
-insert into nutrient_diet values(0000001,40,'Meat');
-insert into nutrient_diet values(0000002,20,'beans');
-insert into nutrient_diet values(0000003,30,'baked potato');
-insert into nutrient_diet values(0000002,60,'milk');
-insert into nutrient_diet values(0000001,40,'egg');
+insert into nutrient_diet values(1,1,'Meat');
+insert into nutrient_diet values(1,2,'beans');
+insert into nutrient_diet values(1,3,'baked potato');
+insert into nutrient_diet values(1,4,'milk');
+insert into nutrient_diet values(1,5,'egg');
 
-insert into workout_plan values(1,'cardio',000001, 23, 'male','weight loss',26);
-insert into workout_plan values(2,'cable crossover',000002, 34, 'male','weight loss',28);
-insert into workout_plan values(3,'pullups',000003, 24, 'female','weight gain',17);
+insert into nutrient_diet values(2,1,'Meat');
+insert into nutrient_diet values(2,2,'beans');
+insert into nutrient_diet values(2,3,'baked potato');
+insert into nutrient_diet values(2,4,'milk');
+insert into nutrient_diet values(2,5,'egg');
 
-insert into muscle_workout values(1,'legs',1,'02:00:00');
-insert into muscle_workout values(2,'chest',3, '00:20:00');
-insert into muscle_workout values(3,'biceps',4, '00:20:00');
+insert into nutrient_diet values(3,1,'Meat');
+insert into nutrient_diet values(3,2,'beans');
+insert into nutrient_diet values(3,3,'baked potato');
+insert into nutrient_diet values(3,4,'milk');
+insert into nutrient_diet values(3,5,'egg');
 
-insert into Member values(01,'musawyne',1,'musa',23,'male');
-insert into Member values(02,'ahmadarif_1',1,'ahmad',34,'male');
-insert into Member values(03,'ayesha_kamran',2,'ayesha',24,'female');
 
-insert into Log values(11111,01,89,78,26,91,75,'24-Jan-2021');
-insert into Log values(22222,02,76,89,28,84,80,'14-May-2020');
-insert into Log values(33333,03,94,100,17,69,64,'22-Apr-2019');
+insert into workout_plan values(1,'cardio',1, 23, 'male','weight loss',26);
+insert into workout_plan values(2,'cable crossover',2, 34, 'male','weight loss',28);
+insert into workout_plan values(3,'pullups',3, 24, 'female','weight gain',17);
+//Edit below.
+insert into muscle_workout values(1,'legs',1,'2H');
+insert into muscle_workout values(1,'chest',2,'2H');
+insert into muscle_workout values(2,'chest',3, '20M');
+insert into muscle_workout values(3,'biceps',4, '20M');
+//edit Above.
+insert into Member(member_name, M_password, planID, member_type, Age, gender) values('Musa','musawyne',1,'user',23,'male');
+insert into Member(member_name, M_password, planID, member_type, Age, gender) values('Ahmed','ahmadarif_1',1,'user',34,'male');
+insert into Member(member_name, M_password, planID, member_type, Age, gender) values('Ayesha','ayesha_kamran',2,'trained',24,'female');
 
+insert into Log(member_id, workout_perc, diet_perc, BMI, Weight, muscle_mass, Log_Date) values(01,89,78,26,91,75,TO_DATE('24-JAN-2021', 'DD-MON-YYYY'));
+insert into Log(member_id, workout_perc, diet_perc, BMI, Weight, muscle_mass, Log_Date) values(02,76,89,28,84,80,TO_DATE('14-MAY-2020', 'DD-MON-YYYY'));
+insert into Log(member_id, workout_perc, diet_perc, BMI, Weight, muscle_mass, Log_Date) values(03,94,100,17,69,64,TO_DATE('07-APR-2019', 'DD-MON-YYYY'));
