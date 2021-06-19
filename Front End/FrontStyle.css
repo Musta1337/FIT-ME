@@ -1,0 +1,66 @@
+body{
+    background-image: url("workout.jpg");
+    background-size: cover;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.menu{
+    background-color: black;
+    height:80px;
+    width:100%;
+    align-content: center;
+    justify-content: space-between;
+    display:flex;
+    padding: 0 5%;
+    font-size: 20px;
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+}
+.menu ul li a:hover{
+    color:chartreuse;
+}
+.menu ul li{
+    padding: 10px 40px;
+    position: relative;
+}
+.menu ul li a{
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.logo{
+ color: antiquewhite;   
+ text-shadow: 5px 5px 5px blue;   
+}
+.logo span{
+    color:blue;
+    text-shadow: 5px 5px 5px white;
+}
+.dropdown{
+    display: none;
+}
+.menu ul li:hover .dropdown{
+    display: block;
+    position: absolute;
+    background-color: black;
+    left:0;
+}
+.dropdown ul{
+    display: block;
+    margin:10px;
+}
+.search{
+    position: absolute;
+}
+input{
+    border:3px solid black;
+    height: 40px;
+    width: 300px;
+    border-radius: 50px;
+    padding: 10px;
+}
