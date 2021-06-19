@@ -36,7 +36,7 @@
     else 
         { die('Could not connect to Oracle: '); }
 
-   $q = "select * from Member where member_name = '".$_POST["Member_name"]."' and M_password = '".$_POST["M_password"].";";
+   $q = "select * from Member where member_name = '".$_POST["user"]."' and M_password = '".$_POST["M_password"].";";
    
    /*
    member_id int NOT NULL,
