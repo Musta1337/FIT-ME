@@ -21,11 +21,12 @@
             if(isset($_POST["M_password"]))
             {
                 $db_sid = "(DESCRIPTION =
-                (ADDRESS = (PROTOCOL = TCP)(HOST = DESKTOP-UAQMM7R)(PORT = 1521))
+                (ADDRESS = (PROTOCOL = TCP)(HOST = MUSTA-PC.mshome.net)(PORT = 1521))
                 (CONNECT_DATA =
-                (SERVER = DEDICATED)
-                (SERVICE_NAME = iqra)
-                ))";// Your oracle SID, can be found in tnsnames.ora  ((oraclebase)\app\Your_username\product\11.2.0\dbhome_1\NETWORK\ADMIN)
+                  (SERVER = DEDICATED)
+                  (SERVICE_NAME = test)
+                )
+              )";// Your oracle SID, can be found in tnsnames.ora  ((oraclebase)\app\Your_username\product\11.2.0\dbhome_1\NETWORK\ADMIN)
                 $db_user = "fitadmin";   // Oracle username e.g "scott"
                 $db_pass = "fitness";    // Password for user e.g "1234"
                 $con = oci_connect($db_user,$db_pass,$db_sid); 
