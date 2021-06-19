@@ -1,0 +1,20 @@
+Login:
+select * from Member where member_name = '".$_POST["user"]."' and M_password = '".$_POST["password"]."'";
+
+
+Register:
+insert into Member(member_name,M_password,planID,member_type,Age,gender) VALUES ('".$_POST["Member_name"]."','".$_POST["M_password"]."', 1, 'none',".$_POST["Age"].", '".$_POST["Gender"]."')";
+
+
+Diet PLan Report:
+select * from Diet_Plan dp join nutrient_diet nd on (dp.diet_id = nd.diet_id) where dp.diet_weeks = '".$_POST["type"]."'";
+
+Exercise Type Report:
+select distinct e.exercise_name, e.freq, e.exercise_equipment, e.exercise_time from muscle_workout mw join workout_plan wp on (mw.planID = wp.planID) join muscle_group mg on (mg.muscle_group = mw.muscle_group) join exercise e on (e.exercise_name = mg.exercise_name) where wp.plan_type = '".$_POST['type']."'";
+
+Search QUery for Diet:
+"select * from diet_plan where diet_name like '%".$_POST['box']."%'"
+
+Search QUery for Exercise:
+"select * from exercise where exercise_name like '%".$_POST['box']."%'"
+
