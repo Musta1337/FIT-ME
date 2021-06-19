@@ -26,13 +26,3 @@ input{
     display: block;
     margin: 5px auto;
 }
-
-#c1
-{
-        text-align: center;
-        border-left: 1px solid black;
-        border-right: 1px solid black;
-        border-bottom: 1px solid black;
-        width:19.5%;
-
-}
