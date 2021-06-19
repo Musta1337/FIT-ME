@@ -38,7 +38,17 @@
     else 
         { die('Could not connect to Oracle: '); }
 
-   $q = "INSERT INTO Member (member_name,M_password,Age,gender) VALUES (".$_POST["member_name"]."," ".$_POST["M_password"]. ", ".$_POST["Age"].", ".$_POST["Gender"].")";
+   $q = "insert into Member(member_name,M_password,planID,member_type,Age,gender) VALUES (".$_POST["member_name"].",".$_POST["M_password"].", 'none', 'none',".$_POST["Age"].", ".$_POST["Gender"].")";
+   
+   /*
+   member_id int NOT NULL,
+   member_name varchar(25),
+   M_password varchar(50) NOT NULL,
+   planID int NOT NULL,
+   member_type varchar(25) NOT NULL,
+   Age NUMBER(3) NOT NULL,
+   gender varchar(6) NOT NULL,
+   */
    $query_id = oci_parse($con, $q); 		
    $r = oci_execute($query_id);
    echo"<br>";
