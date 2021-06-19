@@ -18,3 +18,6 @@ Search QUery for Diet:
 Search QUery for Exercise:
 "select * from exercise where exercise_name like '%".$_POST['box']."%'"
 
+
+LOG:
+insert into Log(member_id, workout_perc, diet_perc, BMI, Weight, muscle_mass, Log_Date) VALUES (".$row['MEMBER_ID'].",".$_POST["workout_perc"].",".$_POST["diet_perc"].",".$_POST["BMI"].",".$_POST["weight"].",".$_POST["muscle_mass"].", TO_DATE('".$_POST["w_Date"]."', 'DD-MON-YYYY'))
