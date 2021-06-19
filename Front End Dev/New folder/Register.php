@@ -18,7 +18,7 @@
         <label for="Gender">Gender</label>
         <input type="text" id=Gender name="Gender" placeholder="@Enter your Gender e.g.Male">
         <button type="submit">SIGN UP</button>
-        <p>Already have an account? <a href="login.html">LOG IN</a>.</p>
+        <p>Already have an account? <a href="login.php">LOG IN</a>.</p>
     </form>
     <?php  // creating a database connection 
     if(isset($_POST["M_password"]))
