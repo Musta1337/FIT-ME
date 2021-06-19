@@ -14,7 +14,7 @@ session_start();
             <h1>Please enter the diet plan type</h1>
             <p>Please enter week or month to find weekly or monthly diets.</p>
             <label for="type">Diet Type</label>
-            <input type="text" id=type name="type" placeholder="Please enter diet type">
+            <input type="text" id=type name="type" placeholder="Please enter diet type (day,week,month)">
             <button type="submit">Find</button>
         </form>
         <?php  // creating a database connection 
