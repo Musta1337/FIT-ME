@@ -21,3 +21,9 @@ Search QUery for Exercise:
 
 LOG:
 insert into Log(member_id, workout_perc, diet_perc, BMI, Weight, muscle_mass, Log_Date) VALUES (".$row['MEMBER_ID'].",".$_POST["workout_perc"].",".$_POST["diet_perc"].",".$_POST["BMI"].",".$_POST["weight"].",".$_POST["muscle_mass"].", TO_DATE('".$_POST["w_Date"]."', 'DD-MON-YYYY'))
+
+Create your personalize plan:
+select * from workout_plan where (age > ".$_POST['age']." - 5 AND age < ".$_POST['age']." + 5) AND (gender = '".$_POST['gender']."') AND (plan_type like '%".$_POST['type']."%') AND (BMI > ".$_POST['bmi']." - 5 and BMI < ".$_POST['bmi']." + 5)
+
+Personalize plan data for personalize plan exercises:
+"select * from muscle_workout where planID = '".$row['PLANID']."'"
