@@ -78,8 +78,7 @@ insert into muscle_workout values(3,'legs',5, '40M');
 insert into muscle_workout values(3,'shoulders',6, '30M');
 
 
-insert into Member(member_name, M_password, planID, member_type, Age, gender)
-values('Musa','musawyne',1,'user',23,'male');
+insert into Member(member_name, M_password, planID, member_type, Age, gender)values('Musa','musawyne',1,'user',23,'male');
 insert into Member(member_name, M_password, planID, member_type, Age, gender) values('Ahmed','ahmadarif_1',1,'user',34,'male');
 insert into Member(member_name, M_password, planID, member_type, Age, gender) values('Ayesha','ayesha_kamran',2,'trained',24,'female');
 
@@ -87,3 +86,4 @@ insert into Log(member_id, workout_perc, diet_perc, BMI, Weight, muscle_mass, Lo
 insert into Log(member_id, workout_perc, diet_perc, BMI, Weight, muscle_mass, Log_Date) values(2,76,89,28,84,80,TO_DATE('14-MAY-2020', 'DD-MON-YYYY'));
 insert into Log(member_id, workout_perc, diet_perc, BMI, Weight, muscle_mass, Log_Date) values(3,94,100,17,69,64,TO_DATE('07-APR-2019', 'DD-MON-YYYY'));
 
+commit;

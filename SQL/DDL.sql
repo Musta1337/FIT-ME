@@ -143,3 +143,6 @@ BEGIN
     FROM DUAL;
 END;
 /
+
+
+commit;
