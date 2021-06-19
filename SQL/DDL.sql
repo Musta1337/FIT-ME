@@ -94,6 +94,7 @@ CREATE TABLE muscle_workout
 CREATE TABLE Member
 (
     member_id int NOT NULL,
+    member_name varchar(25),
     M_password varchar(50) NOT NULL,
     planID int NOT NULL,
     member_type varchar(25) NOT NULL,
