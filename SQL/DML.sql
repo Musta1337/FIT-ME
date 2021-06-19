@@ -51,12 +51,29 @@ insert into nutrient_diet values(3,5,'egg');
 insert into workout_plan values(1,'cardio',1, 23, 'male','weight loss',26);
 insert into workout_plan values(2,'cable crossover',2, 34, 'male','weight loss',28);
 insert into workout_plan values(3,'pullups',3, 24, 'female','weight gain',17);
-//Edit below.
+
 insert into muscle_workout values(1,'legs',1,'2H');
-insert into muscle_workout values(1,'chest',2,'2H');
+insert into muscle_workout values(1,'biceps',2,'2H');
+insert into muscle_workout values(1,'chest',3, '20M');
+insert into muscle_workout values(1,'legs',4, '1H');
+insert into muscle_workout values(1,'biceps',5, '40M');
+insert into muscle_workout values(1,'chest',6, '30M');
+
+insert into muscle_workout values(2,'biceps',1,'2H');
+insert into muscle_workout values(2,'legs',2,'2H');
 insert into muscle_workout values(2,'chest',3, '20M');
-insert into muscle_workout values(3,'biceps',4, '20M');
-//edit Above.
+insert into muscle_workout values(2,'legs',4, '1H');
+insert into muscle_workout values(2,'chest',5, '40M');
+insert into muscle_workout values(2,'biceps',6, '30M');
+
+insert into muscle_workout values(3,'biceps',1,'2H');
+insert into muscle_workout values(3,'legs',2,'2H');
+insert into muscle_workout values(3,'chest',3, '20M');
+insert into muscle_workout values(3,'biceps',4, '1H');
+insert into muscle_workout values(3,'legs',5, '40M');
+insert into muscle_workout values(3,'chest',6, '30M');
+
+
 insert into Member(member_name, M_password, planID, member_type, Age, gender) values('Musa','musawyne',1,'user',23,'male');
 insert into Member(member_name, M_password, planID, member_type, Age, gender) values('Ahmed','ahmadarif_1',1,'user',34,'male');
 insert into Member(member_name, M_password, planID, member_type, Age, gender) values('Ayesha','ayesha_kamran',2,'trained',24,'female');
