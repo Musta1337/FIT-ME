@@ -110,7 +110,7 @@ BEFORE INSERT ON Member
 FOR EACH ROW
 
 BEGIN 
-    SELECT workout_seq.NEXTVAL
+    SELECT member_seq.NEXTVAL
     INTO :new.member_id
     FROM DUAL;
 END;
